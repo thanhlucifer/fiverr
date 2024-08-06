@@ -1,0 +1,12 @@
+import { Footer } from 'antd/es/layout/layout'
+import React from 'react'
+
+const UserFooter = () => {
+  return (
+   <footer>
+    
+   </footer>
+  )
+}
+
+export default UserFooter
