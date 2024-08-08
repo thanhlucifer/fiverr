@@ -7,10 +7,10 @@ import 'react-toastify/dist/ReactToastify.css';
 export const NotificationContext = React.createContext();
 function App() {
   const routes = useRouteCostom();
-  const showNotification = (content, type) => {
+  const showNotification = (content, type, duration = 5000) => {
     toast[type](content, {
       position: "top-right",
-      autoClose: 5000,
+      autoClose: duration,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

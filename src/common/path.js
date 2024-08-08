@@ -3,4 +3,5 @@ export const path = {
     pagenotfound: '*',
     signin: '/signin',
     signup: '/signup',
+    listjob: '/list-job'
 }

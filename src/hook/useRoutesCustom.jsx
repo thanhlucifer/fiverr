@@ -4,23 +4,30 @@ import UserTemplate from '../template/UserTemplate/UserTemplate'
 import PageNotFound from '../components/PageNotFound/PageNotFound'
 import { path } from '../common/path'
 import LoginPage from '../page/LoginPage/LoginPage'
+import ListJobPage from '../page/ListJobPage/ListJobPage'
 
 const useRoutesCustom = () => {
     const routes = useRoutes([
         {
             path: path.home,
-            element: <UserTemplate/>
+            element: <UserTemplate />,
+            children: [
+                {
+                    path: path.listjob,
+                    element: <ListJobPage />
+                }
+            ]
         },
         {
             path: path.pagenotfound,
-            element: <PageNotFound/>
+            element: <PageNotFound />
         },
         {
-            path:path.signin,
-            element: <LoginPage/>
+            path: path.signin,
+            element: <LoginPage />
         }
     ])
-  return routes
+    return routes
 }
 
 export default useRoutesCustom
