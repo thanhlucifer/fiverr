@@ -5,6 +5,10 @@ import PageNotFound from '../components/PageNotFound/PageNotFound'
 import { path } from '../common/path'
 import LoginPage from '../page/LoginPage/LoginPage'
 import ListJobPage from '../page/ListJobPage/ListJobPage'
+import AdminTemplate from '../template/AdminTemplate/AdminTemplate'
+import AdminLoginPage from '../page/AdminLoginPage/AdminLoginPage'
+import ManagerUser from '../page/ManagerUser/ManagerUser'
+
 
 const useRoutesCustom = () => {
     const routes = useRoutes([
@@ -25,6 +29,22 @@ const useRoutesCustom = () => {
         {
             path: path.signin,
             element: <LoginPage />
+        },
+        {
+            path: path.admin,
+            element: <AdminTemplate />,
+            children: [
+                {
+                    path: 'manager-user',
+                    element: <ManagerUser />
+                }
+            ]
+        },
+        {
+            path: '/admin-login',
+            element: <AdminLoginPage />
+           
+            
         }
     ])
     return routes
