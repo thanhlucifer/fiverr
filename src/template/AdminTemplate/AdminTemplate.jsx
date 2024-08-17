@@ -26,7 +26,7 @@ const AdminTemplate = () => {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: <Link >Người dùng</Link> ,
+              label: <Link to="/admin/manager-user">Người dùng</Link> ,
             },
             {
               key: '2',

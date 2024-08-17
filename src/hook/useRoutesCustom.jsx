@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
 import UserTemplate from '../template/UserTemplate/UserTemplate'
 import PageNotFound from '../components/PageNotFound/PageNotFound'
 import { path } from '../common/path'
 import LoginPage from '../page/LoginPage/LoginPage'
-import ListJobPage from '../page/ListJobPage/ListJobPage'
+// import ListJobPage from '../page/ListJobPage/ListJobPage'
+const ListJobPage = React.lazy(() => import('../page/ListJobPage/ListJobPage'))
 import AdminTemplate from '../template/AdminTemplate/AdminTemplate'
-import AdminLoginPage from '../page/AdminLoginPage/AdminLoginPage'
-import ManagerUser from '../page/ManagerUser/ManagerUser'
+// import AdminLoginPage from '../page/AdminLoginPage/AdminLoginPage'
+//import ManagerUser from '../page/ManagerUser/ManagerUser'
+import { Skeleton } from 'antd'
+import CreateUser from '../page/CreateUser/CreateUser'
+const AdminLoginPage = React.lazy(() => import('../page/AdminLoginPage/AdminLoginPage'))
 
+const ManagerUser = React.lazy(() => import('../page/ManagerUser/ManagerUser'))
 
 const useRoutesCustom = () => {
     const routes = useRoutes([
@@ -18,8 +23,9 @@ const useRoutesCustom = () => {
             children: [
                 {
                     path: path.listjob,
-                    element: <ListJobPage />
+                    element: <Suspense fallback={<Skeleton />}><ListJobPage /></Suspense>
                 }
+              
             ]
         },
         {
@@ -35,17 +41,23 @@ const useRoutesCustom = () => {
             element: <AdminTemplate />,
             children: [
                 {
-                    path: 'manager-user',
-                    element: <ManagerUser />
+                    // index: true,
+                    path:'manager-user',
+                    element: <Suspense fallback={<Skeleton />}><ManagerUser /></Suspense>
+                },
+                {
+                    path: 'create-user',
+                    element: <CreateUser />
                 }
             ]
         },
         {
             path: '/admin-login',
-            element: <AdminLoginPage />
+            element: <Suspense fallback={<Skeleton />}><AdminLoginPage /></Suspense>
            
             
         }
+       
     ])
     return routes
 }
