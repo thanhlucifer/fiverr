@@ -5,6 +5,8 @@ import {
   UploadOutlined,
   UserOutlined,
   MedicineBoxOutlined ,
+  HeatMapOutlined,
+  UserAddOutlined
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
@@ -35,8 +37,13 @@ const AdminTemplate = () => {
             },
             {
               key: '3',
-              icon: <i icon="fa-regular fa-handshake" />,
+              icon: <HeatMapOutlined />,
               label: <Link >Công việc đã thuê</Link>,
+            },
+            {
+              key: '4',
+              icon:  <UserAddOutlined />,
+              label: <Link to="/admin/create-user" >Tao nguoi dung</Link>,
             },
           ]}
         />
