@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllSkillApi } from '../../redux/skillSlice'
 import { nguoiDungService } from '../../service/nguoiDung.service'
 
+
 const CreateUser = () => {
   const { infoUser } = useSelector(state => state.authSlice)
   const { listSkill } = useSelector(state => state.skillSlice)
@@ -64,10 +65,10 @@ const CreateUser = () => {
     switch (step) {
       case 0:
         return <form className='space-y-3' onSubmit={handleSubmit}>
-          <InputCustom labelContent="Name" name="name" onChange={handleChangeInput} />
-          <InputCustom labelContent="Email" name="email" onChange={handleChangeInput} />
-          <InputCustom labelContent="Phone" name="phone" onChange={handleChangeInput} />
-          <InputCustom labelContent="Password" typeInput='password' name="password" onChange={handleChangeInput} />
+          <InputCustom labelcontent="Name" name="name" onChange={handleChangeInput} />
+          <InputCustom labelcontent="Email" name="email" onChange={handleChangeInput} />
+          <InputCustom labelcontent="Phone" name="phone" onChange={handleChangeInput} />
+          <InputCustom labelcontent="Password" typeInput='password' name="password" onChange={handleChangeInput} />
           <div>
             <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 ">Giới tính</label>
             <select name='gender' onChange={handleChangeInput} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">

@@ -11,6 +11,7 @@ import { NotificationContext } from '../../App';
 import { useDispatch } from 'react-redux';
 import  {getInfoUSer}  from '../../redux/authSlide.js';
 import useResponsive from '../../hook/useResponsive.jsx';
+import { path } from '../../common/path.js';
 
 const LoginPage = () => {
     const isReponsive = useResponsive({
@@ -86,7 +87,7 @@ const LoginPage = () => {
                         <InputCustom lablecontent="Password"  placeholder="Vui long nhap password"  typeInput='password' onChange={handleChange} value={values.password}  name={'password'} error={errors.password} touched={touched} handleBlur={handleBlur}/>
                         <div>
                             <button type="submit" className="inline-block w-full bg-black text-white py-2 px-5 rounded-md font-bold">Login</button>
-                            <Link className='mt-3 text-blue-500 inline-block hover:underline duration-300'>Chua co tai khoan, bam vao day</Link>
+                            <Link className='mt-3 text-blue-500 inline-block hover:underline duration-300' to={path.signup}>Chua co tai khoan, bam vao day</Link>
                         </div>                   
                     </form>
                 </div>

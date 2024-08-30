@@ -11,10 +11,14 @@ const authSlide = createSlice({
   reducers: {
     getInfoUSer: (state, action) => {
        state.infoUser = action.payload
-    }
+    },
+    logout: (state) => {
+      state.infoUser = null
+      localStorage.removeItem('user'); 
+    },
   }
 });
 
-export const {getInfoUSer} = authSlide.actions
+export const {getInfoUSer, logout} = authSlide.actions
 
 export default authSlide.reducer

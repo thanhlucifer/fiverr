@@ -8,20 +8,28 @@ import UserIcon from '../logo/UserIcon'
 import LogoutIcon from '../logo/LogoutIcon'
 import FormSearchProduct from '../Form/FormSearchProduct'
 import WrapperSuggestJob from '../Wrapper/WrapperSuggestJob'
-const items = [
-  {
-    label: <Link className='flex space-x-2 items-center '><UserIcon /> <span>Thông tin cá nhân</span></Link>,
-    key: '0',
-  },
-  {
-    label: <Link className='flex space-x-2 items-center '><LogoutIcon /> <span>Đăng xuất</span></Link>,
-    key: '1',
-  },
-  
-];
+import { logout } from '../../redux/authSlide'
+import { useDispatch } from 'react-redux'
+
+
 
 const UserHeader = () => {
   const { infoUser } = useSelector((state) => state.authSlide)
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    dispatch(logout()) 
+  }
+  const items = [
+    {
+      label: <Link className='flex space-x-2 items-center '><UserIcon /> <span>Thông tin cá nhân</span></Link>,
+      key: '0',
+    },
+    {
+      label: <Link onClick={handleLogout} className='flex space-x-2 items-center '><LogoutIcon /> <span>Đăng xuất</span></Link>,
+      key: '1',
+    },
+    
+  ];
   console.log(infoUser)
   const checkuserLogin = () => {
     return infoUser ? <Dropdown
