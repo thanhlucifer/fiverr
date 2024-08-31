@@ -5,47 +5,47 @@ const items = [
     {
         key: '1',
         label: 'Programming & Tech',
-        img: 'public/categories/programming-tech.49dbf0d.svg',
+        img: 'public/images/categories/programming-tech.49dbf0d.svg',
     },
     {
         key: '2',
         label: 'Graphics & Design',
-        img: 'public/categories/graphics-design.3272c08.svg',
+        img: 'public/images/categories/graphics-design.3272c08.svg',
     },
     {
         key: '3',
         label: 'Digital Marketing',
-        img: 'public/categories/digital-marketing.85e8846.svg',
+        img: 'public/images/categories/digital-marketing.85e8846.svg',
     },
     {
         key: '4',
         label: 'Writing & Translation',
-        img: 'public/categories/writing-translation.dc66eb8.svg',
+        img: 'public/images/categories/writing-translation.dc66eb8.svg',
     },
     {
         key: '5',
         label: 'Video & Animation',
-        img: 'public/categories/video-animation.21fb1d6.svg',
+        img: 'public/images/categories/video-animation.21fb1d6.svg',
     },
     {
         key: '6',
         label: 'AI Services',
-        img: 'public/categories/ai-services.40511da.svg',
+        img: 'public/images/categories/ai-services.40511da.svg',
     },
     {
         key: '7',
         label: 'Music & Audio',
-        img: 'public/categories/music-audio.6a411f2.svg',
+        img: 'public/images/categories/music-audio.6a411f2.svg',
     },
     {
         key: '8',
         label: 'Business',
-        img: 'public/categories/business.772c3c9.svg',
+        img: 'public/images/categories/business.772c3c9.svg',
     },
     {
         key: '9',
         label: 'Consulting',
-        img: 'public/categories/consulting.93989a4.svg',
+        img: 'public/images/categories/consulting.93989a4.svg',
     }
 
 ]
