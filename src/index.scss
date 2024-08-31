@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.bg-banner {
+    background-image: url(./../public/hero-lg-x1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 438px;
+}
+
+.main-content {
+    @apply min-h-screen pt-[100px];
+}
+
+

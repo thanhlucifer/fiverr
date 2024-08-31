@@ -132,7 +132,7 @@ const RegisterPage = () => {
                                 mode="multiple"
                                 allowClear
                                 style={{ width: '100%' }}
-                                placeholder="Vui lòng chọn skill"
+                                placeholder="Choose skill"
                                 options={listSkill.map(skill => ({ title: skill.tenSkill, value: skill.tenSkill }))}
                                 value={formik.values.skill}
                                 onChange={(value) => formik.setFieldValue('skill', value)}
@@ -146,7 +146,7 @@ const RegisterPage = () => {
                                 mode="tags"
                                 allowClear
                                 style={{ width: '100%' }}
-                                placeholder="Vui lòng chọn chứng chỉ"
+                                placeholder="Choose certification"
                                 tokenSeparators={[',']}
                                 value={formik.values.certification}
                                 onChange={(value) => formik.setFieldValue('certification', value)}
@@ -155,7 +155,7 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <button type="submit" className="bg-green-600 text-white py-2 px-5 rounded-md">Tạo người dùng</button>
+                            <button type="submit" className="bg-green-600 text-white py-2 px-5 rounded-md">Register</button>
                         </div>
                     </form>
                 </div>

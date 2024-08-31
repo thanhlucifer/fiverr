@@ -35,7 +35,7 @@ const FormSearchProduct = ({setItems, setOpenDropdown, handleGetValueChildren}) 
    <>
   
     <form onSubmit={handleSubmit}>
-        <div className='flex justify-between items-center w-[500px] border rounded-md border-black-700 pl-4'>
+        <div className='flex justify-between items-center w-[500px] border rounded-md border-black-700 pl-4 bg-white'>
             <input onChange={handleChange} className='flex-1 focus:outline-none focus:border-none' type="text" placeholder='Nhập tên công việc'/>
             <button className='p-3 text-sm' type='submit'><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
