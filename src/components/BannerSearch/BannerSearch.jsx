@@ -5,23 +5,23 @@ import FormSearchProduct from '../Form/FormSearchProduct'
 const logolink = [
     {
         id: 1,
-        img: 'public/meta.ff37dd3.svg'
+        img: 'meta.ff37dd3.svg'
     },
     {
         id: 2,
-        img: 'public/google.e74f4d9.svg'
+        img: 'google.e74f4d9.svg'
     },
     {
         id: 2,
-        img: 'public/netflix.b310314.svg'
+        img: 'netflix.b310314.svg'
     },
     {
         id: 2,
-        img: 'public/payoneer.7c1170d.svg'
+        img: 'payoneer.7c1170d.svg'
     },
     {
         id: 2,
-        img: 'public/pg.22fca85.svg'
+        img: 'pg.22fca85.svg'
     },
 
 ]
