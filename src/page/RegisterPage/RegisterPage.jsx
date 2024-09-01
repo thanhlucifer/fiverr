@@ -155,7 +155,8 @@ const RegisterPage = () => {
                         </div>
 
                         <div>
-                            <button type="submit" className="bg-green-600 text-white py-2 px-5 rounded-md">Register</button>
+                            <button type="submit" className="inline-block w-full bg-black text-white py-2 px-5 rounded-md font-bold">Register</button>
+                            
                         </div>
                     </form>
                 </div>
