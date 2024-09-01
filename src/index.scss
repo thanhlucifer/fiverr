@@ -21,3 +21,21 @@
 }
 
 
+/* Styles for the header */
+.header {
+    position: relative;
+  }
+  
+  /* Styles for navcate-wrapper */
+  .navcate-wrapper {
+    position: sticky;
+    top: 100px; /* This value should be equal to the height of your header */
+    z-index: 50; /* Ensure it stays above other content */
+    background-color: white;
+    padding: 8px 0;
+  }
+
+  .vertical-related-link {
+    margin: 0 6px 16px;
+    padding: 3px 12px;
+  }

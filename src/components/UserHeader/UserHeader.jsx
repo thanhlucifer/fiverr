@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux'
 import { DownOutlined } from '@ant-design/icons';
 
 
+
 const UserHeader = () => {
   const { infoUser } = useSelector((state) => state.authSlide)
   const dispatch = useDispatch()
@@ -54,7 +55,7 @@ const UserHeader = () => {
     const handleScroll = () => {
       const bannerElement = document.querySelector('.banner-search');
       if (bannerElement) {
-        const bannerHeight = bannerElement.offsetHeight; // Lấy chiều cao của banner
+        const bannerHeight = bannerElement.offsetHeight; 
         if (window.scrollY > bannerHeight) {
           setShowSearchForm(true);
         } else {
@@ -70,11 +71,13 @@ const UserHeader = () => {
     };
   }, []);
 
+
   return (
-    <header className='py-6 fixed top-0 left-0 right-0 z-50 bg-white shadow'>
+    <>
+    <header className='py-6 fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200'>
       <div className="container">
         <div className="content flex items-center justify-between">
-          <div className="header_logo flex items-center space-x-5 ">
+          <div className="header_logo flex items-center space-x-5" style={{minHeight: '50px'}}>
             <Link to={path.home}>
               <LogoIcon />
             </Link>
@@ -97,6 +100,8 @@ const UserHeader = () => {
         </div>
       </div>
     </header>
+   
+    </>
   )
 }
 

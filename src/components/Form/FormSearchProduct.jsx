@@ -32,8 +32,6 @@ const FormSearchProduct = ({setItems, setOpenDropdown, handleGetValueChildren}) 
         
     }
   return (
-   <>
-  
     <form onSubmit={handleSubmit}>
         <div className='flex justify-between items-center w-[500px] border rounded-md border-black-700 pl-4 bg-white'>
             <input onChange={handleChange} className='flex-1 focus:outline-none focus:border-none' type="text" placeholder='Nhập tên công việc'/>
@@ -41,7 +39,6 @@ const FormSearchProduct = ({setItems, setOpenDropdown, handleGetValueChildren}) 
         </div>
     </form>
     
-   </>
   )
 }
 
