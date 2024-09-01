@@ -30,7 +30,7 @@ const logolink = [
 
 const BannerSearch = () => {
     return (
-        <div className='container bg-banner rounded-xl banner-search'>
+        <div className='container bg-banner rounded-xl banner-search mt-40'>
             <div className='text-center'>
                 <div className='p-10'>
                     <h1 className='text-[56px] font-normal text-white'>Find the right <span className='text-green-500'>freelance</span> <br />service, right away</h1>

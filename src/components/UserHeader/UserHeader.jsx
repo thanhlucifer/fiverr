@@ -81,7 +81,7 @@ const UserHeader = () => {
               <Link to={path.home}>
                 <LogoIcon />
               </Link>
-              <div className={`transition-opacity duration-300 ${showSearchForm ? 'opacity-100' : 'opacity-0'} hidden md:block`}
+              <div className={`transition-opacity duration-300 ${showSearchForm ? 'opacity-100' : 'opacity-0'}`}
                 style={{ visibility: showSearchForm ? 'visible' : 'hidden' }}>
                 {showSearchForm && (
                   <WrapperSuggestJob>

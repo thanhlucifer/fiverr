@@ -10,9 +10,9 @@ const UserTemplate = () => {
   return (
     <>
         <UserHeader></UserHeader>
+        <BannerSearch/>
+        <CategoriesSection/>
         <main className='main-content my-6'>
-            <BannerSearch/>
-            <CategoriesSection/>
             <Outlet></Outlet>
         </main>
         <Vertical/>

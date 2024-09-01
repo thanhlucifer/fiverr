@@ -3,39 +3,52 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'Poppins', sans-serif;
-    }
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
 .bg-banner {
-    background-image: url(./../public/hero-lg-x1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 438px;
+  background-image: url(./../public/hero-lg-x1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 438px;
 }
 
+.bg-banner-sm {
+  background: linear-gradient(180deg, #003912 36.72%, #19aa64 141.43%);
+  display: flex;
+  justify-content: center;
+  margin: 0 0 16px;
+  padding: 40px 20px;
+  position: relative;
+}
+
+
+
 .main-content {
-    @apply min-h-screen pt-[100px];
+  @apply min-h-screen pt-[100px] md:pt-[60px];
 }
 
 
 /* Styles for the header */
 .header {
-    position: relative;
-  }
-  
-  /* Styles for navcate-wrapper */
-  .navcate-wrapper {
-    position: sticky;
-    top: 100px; /* This value should be equal to the height of your header */
-    z-index: 50; /* Ensure it stays above other content */
-    background-color: white;
-    padding: 8px 0;
-  }
+  position: relative;
+}
 
-  .vertical-related-link {
-    margin: 0 6px 16px;
-    padding: 3px 12px;
-  }
+/* Styles for navcate-wrapper */
+.navcate-wrapper {
+  position: sticky;
+  top: 100px;
+  /* This value should be equal to the height of your header */
+  z-index: 50;
+  /* Ensure it stays above other content */
+  background-color: white;
+  padding: 8px 0;
+}
+
+.vertical-related-link {
+  margin: 0 6px 16px;
+  padding: 3px 12px;
+}
