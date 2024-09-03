@@ -50,9 +50,9 @@ const RegisterPage = () => {
                 .then((res) => {
                     console.log('User created successfully:', res);
                     showNotification('Đăng ký thành công', 'success');
-                    // setTimeout(() => {
-                    //     window.location.href = '/'
-                    // }, 3000);
+                    setTimeout(() => {
+                        window.location.href = '/'
+                    }, 3000);
                 })
                 .catch((err) => {
                     console.error('Error creating user:', err);
