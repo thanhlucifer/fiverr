@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { congviecservice } from '../../service/congViec.service'
 
 const ListJobPage = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [ListJob, setListJob] = useState([])
     console.log(searchParams.get('tencongviec'))
+    const navigate = useNavigate(); // Sử dụng useNavigate để điều hướng
     useEffect(() => {
         congviecservice.layCongViecTheoTen(searchParams.get('tencongviec')).then((res) => {
             console.log(res)
@@ -14,12 +15,17 @@ const ListJobPage = () => {
             console.log(err)
         })
     }, [searchParams.get('tencongviec')])
+
+     // Hàm điều hướng tới trang chi tiết công việc
+    const handleJobClick = (id) => {
+    navigate(`/job-detail/${id}`);
+};
     return (
         <div className='container'>
             <h1 className='text-center font-bold'>Danh sách công việc dựa trên từ khóa: {searchParams.get('tencongviec') ? searchParams.get('tencongviec') : ''}</h1>
             <div className='grid grid-cols-4 gap-10 mt-10'>
                 {ListJob.map((item, index) => {
-                    return <div key={index} className='space-y-4 border rounded-md p-3'>
+                    return <div key={index} className='space-y-4 border rounded-md p-3 cursor-pointer'   onClick={() => handleJobClick(item.congViec.id)} >
                         <img src={item.congViec.hinhAnh }alt="" className='w-full'/>
                         {/* <h3>{congviec.tenCongViec}</h3> */}
                         <div className='flex items-center space-x-4'>
